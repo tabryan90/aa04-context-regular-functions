@@ -34,5 +34,5 @@ const nemo = new Fish('Nemo');
 
 
 /********************************* Scenario 5 ??? *********************************/
-const swim = nemo.swim; // this swim is bound to nemo - NEVER DO THIS
+const swim = nemo.swim; // this swim is bound to nemo and taken out of the object - NEVER DO THIS
 swim(); // error - this is trying to reference name property on undefined but it cannot access nemo  - NEVER DO THIS
