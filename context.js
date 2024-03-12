@@ -15,23 +15,24 @@ class Fish {
 const nemo = new Fish('Nemo');
 
 /********************************* Scenario 1 *********************************/
-// eat(); // ?
+// eat(); // undefined eats fish food
 
 
-/********************************* Scenario 2 *********************************/
+/********************************* Scenario 2 ??? *********************************/
 // nemo.eat = eat;
-// nemo.eat(); // ?
+// nemo.eat(); // Nemo eats fish food
+
 
 
 /********************************* Scenario 3 *********************************/
-// nemo.eat = eat;
-// eat(); // ?
+// nemo.eat = eat; // does nothing to the next line
+// eat(); // undefined eats fish food
 
 
 /********************************* Scenario 4 *********************************/
-// nemo.swim(); // ?
+// nemo.swim(); // Runs as expected: Nemo swimming in the water
 
 
-/********************************* Scenario 5 *********************************/
-// const swim = nemo.swim;
-// swim(); // ?
+/********************************* Scenario 5 ??? *********************************/
+const swim = nemo.swim; // this swim is bound to nemo - NEVER DO THIS
+swim(); // error - this is trying to reference name property on undefined but it cannot access nemo  - NEVER DO THIS
